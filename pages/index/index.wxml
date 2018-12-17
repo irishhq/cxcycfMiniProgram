@@ -1,0 +1,237 @@
+<!-- index.wxml -->
+<scroll-view>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" class="carousel-wrap">
+    <block wx:for="{{imgUrls}}" wx:key="item.id">
+      <swiper-item>
+        <image class="img-swiper" src="{{item.img_url}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view></view>
+  <!-- 分类导航 -->
+  <view class="category">
+    <view class="icon-box">
+      <view class="icon-cell">
+        <navigator url="/pages/index/notice/notice">
+          <view>
+            <image src="/images/category-icon/tongzhigonggao.png"></image>
+          </view>
+          <view class="icon-txt">通知公告</view>
+        </navigator>
+      </view>
+      <view class="icon-cell">
+        <navigator url="url">
+          <view>
+            <image src="/images/category-icon/chuangyezhengce.png"></image>
+          </view>
+          <view class="icon-txt">创业政策</view>
+        </navigator>
+      </view>
+      <view class="icon-cell">
+        <navigator url="url">
+          <view>
+            <image src="/images/category-icon/chuangyexiangmu.png"></image>
+          </view>
+          <view class="icon-txt">创业项目</view>
+        </navigator>
+      </view>
+      <view class="icon-cell">
+        <navigator url="url">
+          <view>
+            <image src="/images/category-icon/chuangyejijin.png"></image>
+          </view>
+          <view class="icon-txt">创业基金</view>
+        </navigator>
+      </view>
+      <view class="icon-cell">
+        <navigator url="/pages/index/entreBase/entreBase">
+          <view>
+            <image src="/images/category-icon/chuangyejidi.png"></image>
+          </view>
+          <view class="icon-txt">创业基地</view>
+        </navigator>
+      </view>
+      <view class="icon-cell">
+        <navigator url="url">
+          <view>
+            <image src="/images/category-icon/chaungyedaoshi.png"></image>
+          </view>
+          <view class="icon-txt">创业导师</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 创业项目:展示4例 -->
+  <view class="module">
+    <view class="top-guide">
+      <view class="guide-title">创业项目</view>
+      <navigator url="" class="guide-more">更多 ></navigator>
+    </view>
+    <view class="inner-box">
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image lazy-load="true" src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 创业基金 -->
+  <view>
+    <view class=" guide-title title-mid">- 创业基金 -</view>
+    <view class="inner-box">
+      <navigator url="" class="img-size">
+        <image src="http://www.cxcycf.com/templates/main/images/jj.png" class="img-size"></image>
+      </navigator>
+    </view>
+  </view>
+  <!-- 创业基地 -->
+  <view class="module">
+    <view class="top-guide">
+      <view class="guide-title">创业基地</view>
+      <navigator url="" class="guide-more">更多 ></navigator>
+    </view>
+    <view class="inner-box">
+      <view class="column">
+        <view class="cell-single">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg" class="img-size"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 创业导师:展示6例 -->
+  <view class="module">
+    <view class="top-guide">
+      <view class="guide-title">创业导师</view>
+      <navigator url="" class="guide-more">更多 ></navigator>
+    </view>
+    <view class="inner-box">
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="column">
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+        <view class="cell">
+          <navigator url="url">
+            <view class="img-responsive">
+              <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+            </view>
+            <view class="cell-txt">四川师范大学</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

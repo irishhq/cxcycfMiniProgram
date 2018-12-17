@@ -1,0 +1,4 @@
+<!-- pages/index/notice/noticeDetails/noticeDetails.wxml -->
+<!-- 通知正文XML:动态创建 -->
+<import src="/pages/common/itemDetails/itemDetails"/>
+<template is="itemDetails" data="{{...details}}"/>

@@ -1,0 +1,3 @@
+/* pages/index/entreBase/entreBase.wxss */
+@import "/pages/common/itemList/itemList.wxss";
+@import "/pages/common/pageNumber/pageNumber.wxss"

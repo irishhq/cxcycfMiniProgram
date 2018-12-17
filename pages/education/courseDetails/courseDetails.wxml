@@ -1,0 +1,72 @@
+<!-- pages/education/courseDetails/courseDetails.wxml -->
+<view>
+  <view>
+    <video id="myVideo" src="{{videoSrc}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls contain></video>
+  </view>
+  <view>
+    <view class="sw-tl">
+      <view class="tab {{itemSelected[0].isSelected==true? 'cur' : ''}}" id="introTitle" bindtap="switch">
+        <text>简介</text>
+      </view>
+      <view class="tab {{itemSelected[1].isSelected==true? 'cur' : ''}}" id="dirTitle" bindtap="switch">
+        <text>目录</text>
+      </view>
+    </view>
+    <view class="sw-cont">
+      <!-- 简介内容 -->
+      <view class="tabcon {{itemSelected[0].show==false? 'not-cur' : ''}}">
+        <view class="intro">
+          <view class="detail-tl">
+            <view class="coursebox">
+              <view class="name">SYB培训</view>
+              <view class="subtitle grep">提供大学生创新创业SYB计划培训</view>
+              <view class="num-info grep">
+                <text class="fir">22课程</text>
+                <text class="sec">22天学习时长</text>
+                <text class="third">45人正在学习</text>
+              </view>
+            </view>
+          </view>
+          <view class="u-cd-divider" style="height: 12px; background-color: rgb(242, 244, 247);"></view>
+          <view class="detail-course">
+            <view class="coursebox divider">
+              <view class="module grep">
+                <view>负责人:</view>
+                <text>李一田</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 目录部分 -->
+      <view class="tabcon {{itemSelected[1].show==false? 'not-cur' : ''}}">
+        <view class="chapter">
+          <view class="chapter-tl">SYB培训课</view>
+          <view class="ul">
+            <view class="li">
+              <view class="befo"></view>
+              <view>1.融资36计（信用变成金钱）</view>
+            </view>
+            <view class="li">
+              <view class="befo"></view>
+              <view>2.个人融资秘诀</view>
+            </view>
+            <view class="li">
+              <view class="befo"></view>
+              <view>3.企业融资秘诀</view>
+            </view>
+            <view class="li">
+              <view class="befo"></view>
+              <view>4.创业者的财务短视</view>
+            </view>
+            <view class="li">
+              <view class="befo"></view>
+              <view>5.融资-创业概述</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="start-course">加入学习</view>
+</view>

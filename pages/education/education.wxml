@@ -1,0 +1,260 @@
+<!-- education.wxml -->
+<view class="tab">
+  <view class="tab-left" bindtap="tabFun">
+    <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">创业直通班</view>
+    <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">热门课程</view>
+    <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">近期活动</view>
+    <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}}" id="tab-hd04" data-id="3">名师风采</view>
+  </view>
+  <scrollview class="content-right">
+    <view class="content-wrap">
+      <!-- 创业直通班 -->
+      <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+        <view class="course-module" bindtap="toDetail" id="c1">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211113556636.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新SYB计划培训</text>
+            </view>
+            <view class="course-info">
+              <text>22课程</text>
+              <text>22天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211114076781.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新创业通识教育课程体系</text>
+            </view>
+            <view class="course-info">
+              <text>33课程</text>
+              <text>435天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>2233人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211114205206.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新创业活动中辅助选修知识课程体系</text>
+            </view>
+            <view class="course-info">
+              <text>455课程</text>
+              <text>67天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>4534人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211113556636.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新SYB计划培训</text>
+            </view>
+            <view class="course-info">
+              <text>22课程</text>
+              <text>22天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211114076781.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新SYB计划培训</text>
+            </view>
+            <view class="course-info">
+              <text>22课程</text>
+              <text>22天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201610/21/201610211113556636.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>提供大学生创新SYB计划培训</text>
+            </view>
+            <view class="course-info">
+              <text>22课程</text>
+              <text>22天学习时长</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 热门课程 -->
+      <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131340096376.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>木桶原理（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>0人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131339550595.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>创业机会识别（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>0人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131339000751.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>创业规划之技能探索（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>0人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131338361689.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>大学生能力探索（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>0人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131340247939.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>商业模式设计（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201701/13/201701131340391845.png"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>从亮剑精神看团队组建（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 近期活动 -->
+      <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201603/29/201603291011364424.jpg"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>【创新公开课】游戏角色原画之奇幻类角色肖像设计</text>
+            </view>
+            <view class="course-learn">
+              <text>2016/12/15 9:14:42</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201603/29/201603291534006924.jpg"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>从亮剑精神看团队组建（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201603/29/201603291534006924.jpg"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>从亮剑精神看团队组建（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+        <view class="course-module">
+          <image src="http://upload.cxcycf.com/upload/201603/29/201603291011364424.jpg"></image>
+          <view class="course-txt">
+            <view class="course-title">
+              <text>从亮剑精神看团队组建（第一阶段）</text>
+            </view>
+            <view class="course-learn">
+              <text>45人正在学习</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 名师风采 -->
+      <view class="right-item {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+        <navigator url="url" class="tutor-module">
+          <view>
+            <image src="http://upload.cxcycf.com/upload/201610/21/201610211122365170.jpg"></image>
+          </view>
+          <view class="tutor-name">吴柯箭</view>
+          <view class="tutor-info">吴柯箭 成都美石记珠宝有限公司 创办人擅长引导创业者树立积极的就业观，坚定创业…</view>
+        </navigator>
+        <navigator url="url" class="tutor-module">
+          <view>
+            <image src="http://upload.cxcycf.com/upload/201610/21/201610211122066078.jpg"></image>
+          </view>
+          <view class="tutor-name">刘江</view>
+          <view class="tutor-info">刘江 资智汇众筹 创办人 主要为创业者进行股权融资指导与服务</view>
+        </navigator>
+        <navigator url="url" class="tutor-module">
+          <view>
+            <image src="http://upload.cxcycf.com/upload/201610/21/201610211122239401.jpg"></image>
+          </view>
+          <view class="tutor-name">李若曦</view>
+          <view class="tutor-info">李若曦 大创联创始人 SYB创业导师 主要为创业者提供创业指导和有关法律、法规等方面的援助</view>
+        </navigator>
+        <navigator url="url" class="tutor-module">
+          <view>
+            <image src="http://upload.cxcycf.com/upload/201610/21/201610211124022344.jpg"></image>
+          </view>
+          <view class="tutor-name">周斌</view>
+          <view class="tutor-info">周斌 四川厚中文化传播有限公司 联合创始人 为创业者提供情感和技术支持，为其寻找发展机会，引入商业网络</view>
+        </navigator>
+        <navigator url="url" class="tutor-module">
+          <view>
+            <image src="http://upload.cxcycf.com/upload/201603/10/201603101001278498.png"></image>
+          </view>
+          <view class="tutor-name">Sundy</view>
+          <view class="tutor-info">12年软件项目开发设计经验，8年的技术管理经验，7年的自由职业者，带领超过70人…</view>
+        </navigator>
+      </view>
+    </view>
+  </scrollview>
+</view>

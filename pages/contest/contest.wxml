@@ -1,0 +1,272 @@
+<!-- pages/contest/contestDetails/contestDetails.wxml -->
+<view class="page-content">
+  <view class="content-header">
+    <navigator url="url" class="base">四川师范大学2016创新创业大赛</navigator>
+    <!-- <navigator url="" class="map" bindtap="openLocation"></navigator> -->
+  </view>
+  <view class="content">
+    <view class="decoration"></view>
+    <!-- 项目介绍视频 -->
+    <view class="contain">
+      <view class="img-wrap">
+        <view class="bg">
+          <video controls="controls" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" id="video_v1" width="100%" height="100%"></video>
+        </view>
+      </view>
+      <!-- <view class="platform">
+        <text>平台展示</text>
+        <navigator url="url">sicnu.cxcycf.com</navigator>
+      </view> -->
+    </view>
+    <!-- 赛事动态 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">赛事动态</view>
+        <view class="secondary">Event News</view>
+        <view>
+          <image src="/images/contest-icon/dongtai.png" />
+        </view>
+      </view>
+      <view class="section-info">
+        <!-- <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view> -->
+        <view class="dyna" id="dyna">
+          <navigator url="url" class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</navigator>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <!-- <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view> -->
+        <view class="dyna">
+          <navigator url="url" class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</navigator>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <!-- <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view> -->
+        <view class="dyna">
+          <navigator url="url" class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</navigator>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <!-- <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view> -->
+        <view class="dyna">
+          <navigator url="url" class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</navigator>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+    </view>
+    <!-- end 赛事动态 -->
+    <!-- 奖项设置 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">奖项设置</view>
+        <view class="secondary">Prize Settings</view>
+        <view>
+          <image src="/images/contest-icon/jiangxiang.png" />
+        </view>
+      </view>
+      <view class="item-wrap overview">
+        <view class="item">
+          <view>一等奖</view>
+          <view>3</view>
+        </view>
+        <view class="item">
+          <view>二等奖</view>
+          <view>10</view>
+        </view>
+        <view class="item">
+          <view>三等奖</view>
+          <view>30</view>
+        </view>
+      </view>
+    </view>
+    <!-- end 奖项设置 -->
+    <!-- 组织机构 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">组织机构</view>
+        <view class="secondary">Organization</view>
+        <view>
+          <image src="/images/contest-icon/jigou.png" />
+        </view>
+      </view>
+      <view class="org-wrap">
+        <view class="red">
+          <view class="tl red">
+            <text>主办单位</text>
+          </view>
+          <view class="info red">四川师范大学，四川师范大学科技园</view>
+        </view>
+        <view class="blue">
+          <view class="tl blue">
+            <text>大赛组委会</text>
+          </view>
+          <view class="info blue">四川师范大学，四川师范大学科技园</view>
+        </view>
+        <view class="green">
+          <view class="tl green">
+            <text>专家委员会</text>
+          </view>
+          <view class="info green">四川师范大学，四川师范大学科技园</view>
+        </view>
+      </view>
+    </view>
+    <!-- end组织机构 -->
+    <!-- 获奖项目展示 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">获奖项目展示</view>
+        <view class="secondary">Awards Show</view>
+        <view>
+          <image src="/images/contest-icon/zhanshi.png" />
+        </view>
+      </view>
+      <view class="module">
+        <view class="inner-box">
+          <view class="column">
+            <view class="cell">
+              <navigator url="url">
+                <image class="icon-first"></image>
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201610/19/201610191700044779.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  电脑修理店
+                  <text>我们为此，呼吁有关部门加大打击力度，对无牌、无证、无手续的冒</text>
+                </view>
+              </navigator>
+            </view>
+            <view class="cell">
+              <navigator url="url">
+                <image class="icon-sec"></image>
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  外贸童装店
+                  <text>我们为此，呼吁有关部门加大打击力度，对无牌、无证、无手续的冒</text>
+                </view>
+              </navigator>
+            </view>
+          </view>
+          <view class="column">
+            <view class="cell">
+              <navigator url="url">
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201610/19/201610191700044779.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  电脑修理店
+                  <text>我们为此，呼吁有关部门加大打击力度，对无牌、无证、无手续的冒</text>
+                </view>
+              </navigator>
+            </view>
+            <view class="cell">
+              <navigator url="url">
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  外贸童装店
+                  <text>我们为此，呼吁有关部门加大打击力度，对无牌、无证、无手续的冒</text>
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- end 获奖项目展示 -->
+    <!-- 大赛流程 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">大赛流程</view>
+        <view class="secondary">Contest Process</view>
+        <view>
+          <image src="/images/contest-icon/liucheng.png" />
+        </view>
+      </view>
+      <view class="item-wrap overview">
+        <view class="item">
+          <view>答题宣讲会</view>
+          <view>2017-07-01</view>
+        </view>
+        <view class="item">
+          <view>创意组 本科组 研博组准备</view>
+          <view>2016-07-01</view>
+        </view>
+        <view class="item">
+          <view>创意组答辩</view>
+          <view>2016-07-11</view>
+        </view>
+        <view class="item">
+          <view>本科组答辩</view>
+          <view>2016-10-01</view>
+        </view>
+        <view class="item">
+          <view>研博组答辩</view>
+          <view>2016-12-01</view>
+        </view>
+        <view class="item">
+          <view>决赛及颁奖仪式</view>
+          <view>2016-12-29</view>
+        </view>
+      </view>
+    </view>
+    <!-- end 大赛流程 -->
+    <!-- 往届大赛回顾 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">往届大赛回顾</view>
+        <view class="secondary">Past Review</view>
+        <view>
+          <image src="/images/contest-icon/past.png" />
+        </view>
+      </view>
+      <view class="module">
+        <view class="inner-box">
+          <view class="column">
+            <view class="cell">
+              <navigator url="url">
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201610/19/201610191700044779.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  原生生态农产品摄影赛
+                  <text>希望各位参赛选手按照比赛规则参赛！</text>
+                </view>
+              </navigator>
+            </view>
+            <view class="cell">
+              <navigator url="url">
+                <view class="">
+                  <image src="http://upload.cxcycf.com/upload/201601/07/201601071625553612.jpg"></image>
+                </view>
+                <view class="cell-txt">
+                  2016年“第一届”航拍摄影大赛
+                  <text>希望各位参赛者积极配合</text>
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- end 往届大赛回顾 -->
+  </view>
+</view>

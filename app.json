@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/notice/notice",
+    "pages/common/itemList/itemList",
+    "pages/index/notice/noticeDetails/noticeDetails",
+    "pages/common/itemDetails/itemDetails",
+    "pages/index/entreBase/entreBase",
+    "pages/common/pageNumber/pageNumber",
+    "pages/index/entreBase/baseDetails/baseDetails",
+    "pages/personal/personal",
+    "pages/education/education",
+    "pages/education/courseDetails/courseDetails",
+    "pages/contest/contest"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#18a3a7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedColor": "#18a3a7"
+      },
+      {
+        "pagePath": "pages/education/education",
+        "text": "课程",
+        "selectedColor": "#18a3a7"
+      },
+      {
+        "pagePath": "pages/contest/contest",
+        "text": "创业大赛",
+        "selectedColor": "#18a3a7"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "selectedColor": "#18a3a7"
+      }
+    ]
+  }
+}

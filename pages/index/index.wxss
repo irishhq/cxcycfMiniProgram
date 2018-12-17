@@ -1,0 +1,122 @@
+/**index.wxss**/
+page {
+  background-color: #f9f9f9;
+  font-family: "微软雅黑", Helvetica Neue, Helvetica, Arial, Sans-serif;
+}
+
+page, view, image {
+  margin: 0;
+  padding: 0;
+}
+
+/*轮播图*/
+.carousel-wrap {
+  width: 100%;
+  /*微信小程序中规定屏幕的宽度是20rem, 1rem = (750/20)rpx*/
+  height: 9.6rem;
+}
+
+.img-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/*分类目录category*/
+.category {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 0 auto;
+}
+
+.icon-cell {
+  flex: 0 0 33.3333%;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.icon-cell image {
+  width: 37px;
+  height: 37px;
+}
+
+.icon-cell .icon-txt {
+  font-size: 12px;
+  margin-top: 0.21333rem;
+}
+
+/*偶数模块布局*/
+.module {
+  width: 100%;
+}
+
+.top-guide {
+  border-left: 3px bold #18a3a7;
+  display: flex; /*双项目布局*/
+  justify-content: space-between;
+  background-color: #f2f4f7;
+  height: 2rem;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.guide-title {
+  line-height: 2rem;
+}
+
+.guide-more {
+  font-size: 0.8rem;
+  line-height: 2rem;
+  color: #666;
+}
+
+.inner-box {
+  margin: 40rpx;
+  display: flex;
+  flex-wrap: wrap; /*排不下时换行，第一行在上*/
+  align-content: center;
+}
+
+.column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+
+.cell {
+  width: 48%;
+}
+
+.cell image {
+  width: 100%;
+  height: 4.5rem;
+}
+
+.column .cell-txt {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/*创业基金及创业基地单行大图*/
+.img-size {
+  width: 100%;
+  height: 9.6rem;
+}
+
+/*创业基地*/
+.cell-single {
+  width: 100%;
+}
+
+/*创业基金guide-title*/
+.title-mid {
+  background-color: #f2f4f7;
+  height: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,171 @@
+/* pages/index/entreBase/baseDetail/baseDetail.wxss */
+
+.page-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.content-header {
+  margin-bottom: 20px;
+  position: relative;
+  height: 16px;
+  margin-top: 20px;
+}
+
+.content-header .base {
+  display: block;
+  float: left;
+  width: 80%;
+  height: 16px;
+}
+
+.content-header .map {
+  background-image: url(/images/category-icon/chuangyejidi.png);
+  background-size:20px 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+}
+
+.decoration {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+}
+
+.contain {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.contain .bg {
+  width: 100%;
+  height: 10rem;
+  background-image: url("http://upload.cxcycf.com/upload/201610/18/201610181155204857.jpg");
+  background-repeat: round;
+}
+
+.platform {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-top: -44px;
+  padding-top: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 9px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-title .primary {
+  font-family: 'Lato', sans-serif;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.section-title .secondary {
+  color: #e34e47;
+  border: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-style: italic;
+}
+
+.section-title view image {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 1px;
+  right: 0px;
+}
+
+.contain text {
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #666;
+}
+
+.contain .more {
+  color: #4c9ddf;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+/*基地基本信息*/
+
+.item-wrap {
+  padding: 5px 0px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+}
+
+.item-wrap .item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
+/*赛事动态*/
+
+.section-info {
+  position: relative;
+  width: 100%;
+  height: 3.5rem;
+}
+
+.section-info image {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 0px;
+}
+
+.section-info .dyna {
+  padding-left: 3.5rem;
+}
+
+.section-info .dyna .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.section-info .dyna .info {
+  display: block;
+  font-size: 10px;
+  color: #c1c1c1;
+  line-height: 20px;
+}
+
+/*相关图片*/
+
+.carousel-wrap {
+  width: 100%;
+  height: 9.6rem;
+}
+
+.img-swiper {
+  width: 100%;
+  height: 100%;
+}

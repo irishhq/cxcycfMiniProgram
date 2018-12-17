@@ -1,0 +1,2 @@
+/* pages/index/notice/notice.wxss */
+@import "/pages/common/itemList/itemList.wxss"

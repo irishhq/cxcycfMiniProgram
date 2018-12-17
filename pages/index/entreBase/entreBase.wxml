@@ -1,0 +1,11 @@
+<!--pages/index/entreBase/entreBase.wxml-->
+<view>
+  <block wx:for="{{disTimes}}">
+    <view>
+      <import src="/pages/common/itemList/itemList" />
+      <template is="itemList" data="{{...baseList}}" />
+    </view>
+  </block>
+  <import src="/pages/common/pageNumber/pageNum.wxml" />
+  <template is="pageNum" />
+</view>

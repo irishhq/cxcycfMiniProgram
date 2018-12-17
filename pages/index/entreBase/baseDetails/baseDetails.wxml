@@ -1,0 +1,132 @@
+<!-- pages/index/entreBase/baseDetail/baseDetail.wxml -->
+<view class="page-content">
+  <view class="content-header">
+    <navigator url="url" class="base">四川师范大学科技园</navigator>
+    <navigator url="" class="map" bindtap="openLocation"></navigator>
+  </view>
+  <view class="content">
+    <view class="decoration"></view>
+    <!-- 基地详情 -->
+    <view class="contain">
+      <view class="img-wrap">
+        <view class="bg"></view>
+      </view>
+      <view class="platform">
+        <text>平台展示</text>
+        <navigator url="url">sicnu.cxcycf.com</navigator>
+      </view>
+    </view>
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">基地详情</view>
+        <view class="secondary">Base Details</view>
+        <view>
+          <image src="/images/base-icon/drawing-tablet.png" />
+        </view>
+      </view>
+      <text>
+        四川师范大学科技园（以下简称科技园）是2013年10月四川省科技厅、教育厅同意建立的省级大学科技园，是西部地区唯一以文化创意为主要特色的大学科技园。它所依托的四川师范大学是四川省人民政府举办的全日制综合性省属重点大学，覆盖了文学、理学、
+      </text>
+      <navigator url="url" class="more">more>></navigator>
+    </view>
+    <!-- end 基地详情 -->
+    <!-- 基地基本信息 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">基地基本信息</view>
+        <view class="secondary">Base Information</view>
+        <view>
+          <image src="/images/base-icon/paintbox.png" />
+        </view>
+      </view>
+      <view class="item-wrap overview">
+        <view class="item">
+          <view>主管单位</view>
+          <view>四川师范大学科技园</view>
+        </view>
+        <view class="item">
+          <view>规模</view>
+          <view>20人以内</view>
+        </view>
+        <view class="item">
+          <view>地址</view>
+          <view>四川省成都市锦江区劼人路143号</view>
+        </view>
+        <view class="item">
+          <view>主页</view>
+          <view>暂无</view>
+        </view>
+      </view>
+    </view>
+    <!-- end 基地基本信息 -->
+    <!-- 赛事动态 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">赛事动态</view>
+        <view class="secondary">Event News</view>
+        <view>
+          <image src="/images/base-icon/drawing-tablet.png" />
+        </view>
+      </view>
+      <view class="section-info">
+        <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view>
+        <view class="dyna">
+          <view class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</view>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view>
+        <view class="dyna">
+          <view class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</view>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view>
+        <view class="dyna">
+          <view class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</view>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+      <view class="section-info">
+        <view>
+          <image src="/images/基地详情exp.jpg"></image>
+        </view>
+        <view class="dyna">
+          <view class="title">第二届浙江省“互联网+”大学生创新创业大赛在杭州师范大学举行</view>
+          <view class="info">2016-12-22</view>
+        </view>
+      </view>
+    </view>
+    <!-- end 赛事动态 -->
+    <!-- 相关图片 -->
+    <view class="contain no-bottom">
+      <view class="decoration"></view>
+      <view class="section-title">
+        <view class="primary">相关图片</view>
+        <view class="secondary">Atlas</view>
+        <view>
+          <image src="/images/base-icon/jpg-image.png" />
+        </view>
+      </view>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" class="carousel-wrap">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image class="img-swiper" src="{{item}}" mode="scaleToFill"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- end 相关图片 -->
+</view>

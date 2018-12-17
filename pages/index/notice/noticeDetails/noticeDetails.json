@@ -1,0 +1,6 @@
+{
+  "backgroundTextStyle":"light",
+  "navigationBarTitleText": "正文",
+  "navigationBarTextStyle":"black",
+  "enablePullDownRefresh": true
+}
