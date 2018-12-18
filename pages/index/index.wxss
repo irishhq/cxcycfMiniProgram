@@ -12,8 +12,9 @@ page, view, image {
 /*轮播图*/
 .carousel-wrap {
   width: 100%;
-  /*微信小程序中规定屏幕的宽度是20rem, 1rem = (750/20)rpx*/
-  height: 9.6rem;
+  /*微信小程序中规定屏幕的宽度是20rem, 
+  1rem = (750/20)rpx,或者用rpx,设计图为390，css中为390rpx*/
+  height: 390rpx;
 }
 
 .img-swiper {
@@ -24,10 +25,10 @@ page, view, image {
 /*分类目录category*/
 .category {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 
-.icon-box {
+.category .icon-box {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -36,13 +37,13 @@ page, view, image {
 
 .icon-cell {
   flex: 0 0 33.3333%;
-  margin-top: 1rem;
+  margin-top: 40rpx;
   text-align: center;
 }
 
 .icon-cell image {
-  width: 37px;
-  height: 37px;
+  width: 74rpx;
+  height: 74rpx;
 }
 
 .icon-cell .icon-txt {
@@ -79,41 +80,46 @@ page, view, image {
   margin: 40rpx;
   display: flex;
   flex-wrap: wrap; /*排不下时换行，第一行在上*/
-  align-content: center;
-}
-
-.column {
-  flex-basis: 100%;
-  display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 40rpx;
 }
 
-.cell {
+.inner-box navigator {
   width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-.cell image {
+.inner-box navigator view{
   width: 100%;
-  height: 4.5rem;
+}
+.inner-box navigator image {
+  width: 100%;
+  height: 180rpx;
 }
 
-.column .cell-txt {
+.inner-box navigator .cell-txt {
   font-size: 0.8rem;
   line-height: 1rem;
+  text-align: center;
 }
 
 /*创业基金及创业基地单行大图*/
-.img-size {
+.inner-box navigator.jumbo,
+.inner-box navigator.jumbo .img-size {
   width: 100%;
-  height: 9.6rem;
+  height: 360rpx;
 }
 
 /*创业基地*/
-.cell-single {
+.inner-box navigator.cell-single,
+.inner-box navigator.cell-single .img-size {
   width: 100%;
 }
-
+.inner-box navigator.cell-single .img-size{
+  height: 360rpx;
+}
 /*创业基金guide-title*/
 .title-mid {
   background-color: #f2f4f7;
