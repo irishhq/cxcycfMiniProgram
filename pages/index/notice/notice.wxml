@@ -1,4 +1,7 @@
 <!--pages/index/notice/notice.wxml-->
 <!--通知公告列表页面-->
 <import src="/pages/common/itemList/itemList"/>
-<template is="itemList" data="{{...notice}}"/>
+<block wx:for="{{noticeList}}" wx:key="index">
+  <template is="itemList" data="{{...item}}"/>
+</block>
+
