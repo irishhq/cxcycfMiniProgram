@@ -8,33 +8,34 @@
       <image src="http://www.cxcycf.com/templates/main/images/user-avatar.png"></image>
     </view>
     <view>
-      用户1567232658+923
+      {{userInfo}}
     </view>
   </view>
 
   <!--资源管理-->
   <view class="span">
-    <view><navigator>我的收藏</navigator></view>
-    <view><navigator>用户足迹</navigator></view>
-    <view><navigator>我的文章</navigator></view>
-    <view><navigator>我的问答</navigator></view>
-    <view><navigator>我的课堂</navigator></view>
+    <view><navigator class="arrow">我的收藏</navigator></view>
+    <view><navigator class="arrow">用户足迹</navigator></view>
+    <view><navigator class="arrow">我的文章</navigator></view>
+    <view><navigator class="arrow">我的问答</navigator></view>
+    <view><navigator class="arrow">我的课堂</navigator></view>
   </view>
 
   <!--项目管理-->
   <view class="span">
-    <view><navigator>我的项目</navigator></view>
-    <view><navigator>合伙人招募</navigator></view>
-    <view><navigator>项目通知</navigator></view>
-    <view><navigator>项目报表</navigator></view>
+    <view><navigator class="arrow">我的项目</navigator></view>
+    <view><navigator class="arrow">合伙人招募</navigator></view>
+    <view><navigator class="arrow">项目通知</navigator></view>
+    <view><navigator class="arrow">项目报表</navigator></view>
   </view>
 
   <!--个人信息-->
   <view class="span">
-    <view><navigator>个人资料</navigator></view>
-    <view><navigator>我的导师</navigator></view>
-    <view><navigator>我的招募申请</navigator></view>
-    <view><navigator>我的留言</navigator></view>
-    <view><navigator>退出登录</navigator></view>
+    <view><navigator class="arrow">个人资料</navigator></view>
+    <view><navigator class="arrow">我的导师</navigator></view>
+    <view><navigator class="arrow">我的招募申请</navigator></view>
+    <view><navigator class="arrow">我的留言</navigator></view>
+    <view><navigator class="arrow">退出登录</navigator></view>
   </view>
+  <button open-type="getUserInfo"/>登录
 </view>
