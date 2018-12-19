@@ -9,12 +9,15 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // 发送 res.code 到后台换取 openId, sessionKey, unionIdc
+        console.log("res.code = " + res.code);
       }
     })
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log("授权 = ");
+        console.log(res.authSetting);
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
@@ -32,6 +35,10 @@ App({
         }
       }
     })
+    // wx.playBackgroundAudio({
+    //   dataUrl: "http://fs.w.kugou.com/201812191613/9e7ac51ddb84d3fd37e062aa464559f1/G046/M01/11/17/bg0DAFYfrx6AZnO9ABo4AkPw9aQ590.mp3",
+    //   title: "bgMusic"
+    // })
   },
   globalData: {
     userInfo: null
