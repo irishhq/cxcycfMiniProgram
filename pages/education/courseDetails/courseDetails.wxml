@@ -68,5 +68,5 @@
       </view>
     </view>
   </view>
-  <view class="start-course">加入学习</view>
+  <view class="start-course" bindtap="joinLearning">{{courseLearning}}</view>
 </view>
