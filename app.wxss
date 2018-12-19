@@ -8,3 +8,18 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+/*通用箭头样式*/
+.arrow{
+  display: flex;
+  justify-content: space-between; /*两端对齐*/
+  align-items: center;  /*垂直居中*/
+}
+.arrow::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid #ccc;
+  border-right: 3rpx solid #ccc;
+  transform: rotate(45deg);
+}
