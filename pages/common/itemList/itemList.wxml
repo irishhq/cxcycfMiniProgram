@@ -3,29 +3,17 @@
 <!--列表页面-->
 <template name="itemList">
   <scroll-view>
-    <navigator url="{{url}}" class="item-cell">
+    <navigator url="{{url}}" class="item-cell" data-nid="{{nid}}">
       <view>
-        <image src="{{imgSrc}}"></image>
+        <image src="{{img_url}}"></image>
       </view>
       <view class="item-body">
-        <view class="item-title">{{itemTitle}}</view>
-        <view class="item-info">{{itemInfo}}</view>
+        <view class="item-title">{{title}}</view>
+        <view class="item-info">{{desc}}</view>
         <view class="release-time">
-          <text>{{releaseTime}}</text>
+          <text>{{ctime}}</text>
         </view>
       </view>
     </navigator>
-    <!--<navigator url="url" class="item-cell">
-      <view>
-        <image src="http://upload.cxcycf.com/upload/201612/06/201612061512234092.jpg"></image>
-      </view>
-      <view class="item-body">
-        <view class="item-title">玉龙湾免费大学生创业园正式启动</view>
-        <view class="item-info">创业大势所趋 落实还有难度&amp;emsp;&amp;emsp;国家提倡“大众创业，万众创新”，这个政策导向很好，但要具体落实还有一段路要走。&amp;emsp;&amp;emsp;一方面，要创业，很多大学生都还没做好准备，不懂应如何处理创…</view>
-        <view class="release-time">
-          <text>2016-09-05 14:24</text>
-        </view>
-      </view>
-    </navigator>-->
   </scroll-view>
 </template>
