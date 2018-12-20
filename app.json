@@ -52,5 +52,9 @@
         "selectedIconPath": "images/icon/个人中心_select.png"
       }
     ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "downloadFile": 10000
   }
 }
