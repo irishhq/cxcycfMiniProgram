@@ -23,3 +23,17 @@
   border-right: 3rpx solid #ccc;
   transform: rotate(45deg);
 }
+
+/*通用单行超出范围截取并添加省略号*/
+.ell {
+  overflow: hidden; /*超出范围隐藏*/
+  white-space: nowrap;  /*不允许换行*/
+  text-overflow: ellipsis; /*超出部分添加'...'*/
+}
+
+/*通用底部没有更多内容样式*/
+.no-more{
+  color: #eee;
+  text-align: center;
+  font-size: 14px;
+}
