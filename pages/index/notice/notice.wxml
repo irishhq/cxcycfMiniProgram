@@ -4,4 +4,4 @@
 <block wx:for="{{noticeList}}" wx:key="index">
   <template is="itemList" data="{{...item}}"/>
 </block>
-
+<view wx:if="{{!hasMore}}" class="no-more">已经到底了</view>

@@ -4,23 +4,64 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // notice: {
-    //   url: "/pages/index/notice/noticeDetails/noticeDetails",
-    //   imgSrc: "http://upload.cxcycf.com/upload/201612/06/201612061512317998.jpg",
-    //   itemTitle: "我省创新高校编制管理 高层次人才编制可单列",
-    //   itemInfo: "近日，四川省委办公厅印发《关于进一步加强和改进高等学校党的建设的意见》，提出高校党政领导班子实行任期制，明确每届任期5年，领导人员原则上担任同一职务时间不超过两届或10年。&amp;emsp;&amp;emsp;《意见》强调…",
-    //   releaseTime: "2016-09-05 14:23"
-    // },
-    // noticeList: []
+    noticeList: [],
+    pno: 1,       /*初始页码*/
+    pageCount: 6  /*模拟数据*/
   },
-  getNoticeList: function() {
+  /**
+   * 获取通知列表数据
+   */
+  loadMore: function () {
+    var timer = setTimeout(function () {
+      wx.showLoading({
+        title: '加载中...',
+      })
+    }, 500);
     wx.request({
       url: "http://176.202.57.10:3000/noticeList",
+      data: {
+        // pno: ++this.data.pageIndex,
+        // pageSize: this.data.pageSize
+      },
       success: (res) => {
-        // var noticeList = res.data;
+        /*显示下拉加载刷新*/
+        setTimeout(function () {
+          clearTimeout(timer);
+          wx.hideLoading();
+        });
+        if (this.data.hasMore == false) { /*数据加载完全，没有下一页数据时，返回并弹出提示框*/
+          wx.showToast({
+            title: '没有更多了...',
+            icon: 'none'
+          })
+          return;
+        }
+        /* 应从后台获取页码总数&当前页码,暂时以固定数据替代 */
+        var pageCount = this.data.pageCount; /*res.data.pageCount;*/
+        var pno = this.data.pno; /*res.data.pageIndex;*/
+
+        var flag = pno < pageCount; /*用户判断是否加载完所有数据*/
+        var list = this.data.noticeList.concat(res.data); /*追加下一页数据*/
+
         this.setData({
-          noticeList: res.data
+          noticeList: list,
+          hasMore: flag,
+          pno: ++pno
         })
+      },
+      fail: (err) => {        
+        if (err.errMsg == "request:fail") {
+          setTimeout(function () {
+            wx.showToast({
+              title: '请检查网络连接',
+              icon: 'none',
+              duration: 2000
+            });
+          }, 10000)
+        }
+      },
+      complete: (res) => {
+        console.log(res);
       }
     })
   },
@@ -28,7 +69,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNoticeList();
+    this.loadMore();
   },
 
   /**
@@ -70,7 +111,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.loadMore();
   },
 
   /**
