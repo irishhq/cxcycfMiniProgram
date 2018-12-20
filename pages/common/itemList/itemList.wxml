@@ -8,7 +8,7 @@
         <image src="{{img_url}}"></image>
       </view>
       <view class="item-body">
-        <view class="item-title">{{title}}</view>
+        <view class="item-title ell">{{title}}</view>
         <view class="item-info">{{desc}}</view>
         <view class="release-time">
           <text>{{ctime}}</text>
