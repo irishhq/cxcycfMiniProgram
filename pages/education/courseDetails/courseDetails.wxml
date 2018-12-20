@@ -1,7 +1,7 @@
 <!-- pages/education/courseDetails/courseDetails.wxml -->
 <view>
   <view>
-    <video id="myVideo" src="{{videoSrc}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls contain></video>
+    <video id="myVideo" src="{{videoSrc}}" poster="{{poster}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls contain></video>
   </view>
   <view>
     <view class="sw-tl">
