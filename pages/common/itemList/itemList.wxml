@@ -1,19 +1,16 @@
-<!--pages/common/itemList/itemList.wxml-->
-
-<!--列表页面-->
+<!-- pages/common/itemList/itemList.wxml -->
+<!-- 列表页面 -->
 <template name="itemList">
-  <scroll-view>
-    <navigator url="{{url}}" class="item-cell" data-nid="{{nid}}">
-      <view>
-        <image src="{{img_url}}"></image>
+  <view url="{{url}}" class="item-cell" data-nid="{{nid}}" bindtap="toDetail">
+    <view>
+      <image src="{{img_url}}"></image>
+    </view>
+    <view class="item-body">
+      <view class="item-title ell">{{title}}</view>
+      <view class="item-info">{{desc}}</view>
+      <view class="release-time">
+        <text>{{ctime}}</text>
       </view>
-      <view class="item-body">
-        <view class="item-title ell">{{title}}</view>
-        <view class="item-info">{{desc}}</view>
-        <view class="release-time">
-          <text>{{ctime}}</text>
-        </view>
-      </view>
-    </navigator>
-  </scroll-view>
+    </view>
+  </view>
 </template>

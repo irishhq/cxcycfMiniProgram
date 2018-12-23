@@ -2,22 +2,22 @@
 <!--template: itemDetails.wxml-->
 <template name="itemDetails">
   <view class="detail-wrap">
-    <view class="detail-title">{{detailTitle}}</view>
+    <view class="detail-title">{{title}}</view>
     <view class="content">
       {{content}}
     </view>
     <view class="detail-info">
       <view class="detail-time">
         <image src="/images/icon/发布时间.png"></image>
-        <view>{{detailTime}}</view>
+        <view>{{ctime}}</view>
       </view>
       <view class="detail-src">
         <image src="/images/icon/来源.png"></image>
-        <view>来源：{{detailSrc}}</view>
+        <view>来源:</view>
       </view>
       <view class="detail-views">
         <image src="/images/icon/浏览.png">浏览</image>
-        <view>{{detailViews}}233</view>
+        <view>233</view>
       </view>
     </view>
   </view>
