@@ -5,8 +5,9 @@ Page({
    */
   data: {
     noticeList: [],
-    pno: 1,       /*初始页码*/
-    pageCount: 6  /*模拟数据*/
+    pno: 0,       /*初始页码*/
+    pageCount: 0,  /*模拟数据*/
+    pageSize: 5
   },
   /**
    * 获取通知列表数据
@@ -20,8 +21,8 @@ Page({
     wx.request({
       url: "http://176.202.57.10:3000/noticeList",
       data: {
-        // pno: ++this.data.pageIndex,
-        // pageSize: this.data.pageSize
+        pno: this.data.pno++,
+        pageSize: this.data.pageSize
       },
       success: (res) => {
         /*显示下拉加载刷新*/
@@ -37,11 +38,11 @@ Page({
           return;
         }
         /* 应从后台获取页码总数&当前页码,暂时以固定数据替代 */
-        var pageCount = this.data.pageCount; /*res.data.pageCount;*/
+        var pageCount = res.data.pageCount; /*res.data.pageCount;*/
         var pno = this.data.pno; /*res.data.pageIndex;*/
 
         var flag = pno < pageCount; /*用户判断是否加载完所有数据*/
-        var list = this.data.noticeList.concat(res.data); /*追加下一页数据*/
+        var list = this.data.noticeList.concat(res.data.data); /*追加下一页数据*/
 
         this.setData({
           noticeList: list,
@@ -49,7 +50,7 @@ Page({
           pno: ++pno
         })
       },
-      fail: (err) => {        
+      fail: (err) => {
         if (err.errMsg == "request:fail") {
           setTimeout(function () {
             wx.showToast({
@@ -63,6 +64,12 @@ Page({
       complete: (res) => {
         console.log(res);
       }
+    })
+  },
+  toDetail: function (e) {
+    var nid = e.currentTarget.dataset.nid;
+    wx.navigateTo({
+      url: 'noticeDetails/noticeDetails?nid=' + nid
     })
   },
   /**
