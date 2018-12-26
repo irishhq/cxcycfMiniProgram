@@ -2,6 +2,8 @@
 const express = require("express");
 const pool = require("./pool");
 const cors = require("cors");
+const fs = require("fs");
+const multer = require("multer");
 var app = express();
 app.listen(3000);
 
@@ -110,3 +112,36 @@ app.get("/noticeDetails", (req, res) => {
         res.send(result);
     })
 })
+
+/**
+ * 功能:上传头像
+ */
+//创建multer对象指定上传文件目录,创建处理上传请求/upload上传单个文件
+var upload = multer({ dest: "public/upload" });
+app.post("/upload", upload.single("mypic"), (req, res) => {//一次上传一张图片，指定上传文件表单name="upload"
+    //获取上传文件大小 拒绝超过2mb文件
+    var size = req.file.size / 1024 / 1024;//直接获取：字节
+    if (size > 2) {
+        res.send({ code: -1, msg: "上传图片过大，超过2MB" });
+        return;
+    }
+    //获取上传文件类型 图片 (image/gif,image/png,image/jpg,text/css)
+    var type = req.file.mimetype;
+    var i2 = type.indexOf("image");
+    if(i2 == -1) {
+        res.send({code:-2, msg: "上传文件需为图片"});
+        return;
+    }
+    //创建新文件名 1.jpg=>238749389.jpg
+    var src = req.file.originalname;
+    var fTime = new Date().getTime(); //时间戳
+    var fRand = Math.floor(Math.random() * 9999); //随机数
+    var i3 = src.lastIndexOf(".");
+    var suff = src.substring(i3, src.length);   //后缀
+    var des = "./public/upload/" + fTime + fRand + suff; 
+    console.log(des);
+    //将临时文件移动到upload目录下
+    fs.renameSync(req.file.path, des); 
+    //返回上传成功信息
+    res.send({code:1, msg: "图片上传成功"}) 
+});
