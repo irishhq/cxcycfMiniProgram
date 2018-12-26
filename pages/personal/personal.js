@@ -6,19 +6,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    avator: "http://127.0.0.1:3000/upload/15456342156783747.png"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionIdc
-        console.log("res.code = " + res.code);
-      }
-    })
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionIdc
+    //     console.log("res.code = " + res.code);
+    //   }
+    // })
     // 获取用户信息
     // wx.getSetting({
     //   success: res => {
@@ -45,7 +45,47 @@ Page({
     //   }
     // })
   },
-
+  /**
+   * 上传头像
+   */
+  uploadAvator: function () {
+    wx.chooseImage({
+      sourceType: ['camera', 'album'],                    // 从相册或相机中选图片
+      count: 1,                                           // 选择单张图片
+      sizeType: ['compressed'],                           // 将原图压缩
+      success: function (res) {                           // 成功获取本地图片路径
+        wx.showToast({
+          title: "正在上传中...",
+          icon: 'loading'
+        })
+        setTimeout(function() {
+          wx.hideToast();
+        }, 1500);
+        wx.uploadFile({                                   // 上传图片
+          url: "http://127.0.0.1:3000/upload",            // 服务器程序路径
+          filePath: res.tempFilePaths[0],                 // 本地图片路径
+          name: 'mypic',                                  // 图片name值，mypic
+          header: {
+            "Content-Type": "multipart/form-data"         // 指定头
+          },
+          success: function () {                          // 上传成功
+            wx.showToast({
+              title: '成功',
+              icon: 'success',
+              duration: 2000
+            })
+          },
+          fail: function() {
+            wx.showModal({
+              title: '错误提示',
+              content: '系统正在升级中,请5s后重试!',
+              showCancel: false
+            })
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

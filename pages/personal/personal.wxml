@@ -4,11 +4,11 @@
 
   <!--用户-->
   <view class="user">
-    <view>
-      <image src="http://www.cxcycf.com/templates/main/images/user-avatar.png"></image>
+    <view bindtap="uploadAvator">
+      <image src="{{avator}}"></image>
     </view>
     <view>
-      {{userInfo}}
+      用户342433
     </view>
   </view>
 
