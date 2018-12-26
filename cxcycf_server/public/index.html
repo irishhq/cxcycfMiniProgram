@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试用表单</title>
+</head>
+<body>
+  <!-- 表单传数据默认按照 字符串传递 -->
+  <!-- 图片不能转换字符串 -->
+  <!-- 表单传数据默认修改二进制传递 -->
+  <!-- 图片、视频，音频,docx... -->
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    选择你的头像
+    <input type="file" name="mypic" id="">
+    <br>
+    <input type="submit" value="上传">
+  </form>
+</body>
+</html>
